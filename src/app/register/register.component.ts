@@ -1,7 +1,12 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { UserService } from '../user.service';
+
+import {AngularFireDatabase} from 'angularfire2/database';
+import {NgForm} from '@angular/forms';
+import { from } from 'rxjs';
 
 @Component({
   selector: 'app-register',
@@ -13,21 +18,15 @@ export class RegisterComponent implements OnInit {
   user = '';
   password = '';
 
-  constructor(private userservice: UserService, private router: Router) { }
+  constructor(private userservice: UserService, private router: Router, private db: AngularFireDatabase) { }
 
   ngOnInit() {
   }
 
-  signup(user: string, password: string) {
-    console.log(`เรียกฟังก์ชัน signup(user=${user}, password=${password})`);
-    this.user = user;
-    this.password = password;
-    this.userservice._saveUser(user, password).subscribe(
-      () => {
-        this.router.navigate([ '/login' ]);
-      },
-      error => {
-        console.error( error );
-      });
+  signup(data: NgForm) {
+    
+    this.db.list('/60114440136/user').push(data.value);
+    alert("ลงทะเบียนเสร็จสิ้น")
+    
   }
 }

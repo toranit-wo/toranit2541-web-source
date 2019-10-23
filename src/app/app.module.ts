@@ -10,6 +10,13 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users/users.component';
+// import { LogComponent } from './log/log.component';
+// import { PComponent } from './p/p.component';
+import { AngularFireModule} from 'angularfire2';
+import { firebaseConfig } from './../environments/firebase.config';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { FormsModule} from '@angular/forms';
+import { MyselfComponent } from './myself/myself.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +26,16 @@ import { UsersComponent } from './users/users.component';
     LoginComponent,
     HomeComponent,
     RegisterComponent,
-    UsersComponent
+    UsersComponent,
+    MyselfComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    FormsModule,
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

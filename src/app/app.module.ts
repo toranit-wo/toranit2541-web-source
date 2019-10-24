@@ -17,6 +17,7 @@ import { firebaseConfig } from './../environments/firebase.config';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { FormsModule} from '@angular/forms';
 import { MyselfComponent } from './myself/myself.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { MyselfComponent } from './myself/myself.component';
     RegisterComponent,
     UsersComponent,
     MyselfComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

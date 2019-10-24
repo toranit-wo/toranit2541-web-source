@@ -2,3 +2,26 @@
   float: left;
   width: 400px;
 }
+img{
+  height: 300px;
+  float: left;
+  width: 120px;
+  // border-radius: 300px;
+}
+div.gallery {
+  margin: 5px;
+  border: 5px solid rgb(10, 0, 0);
+  float: left;
+}
+
+div.gallery:hover {
+  border: 5px solid  #F7FDAF;
+}
+
+
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  background: #66ffcc;
+}

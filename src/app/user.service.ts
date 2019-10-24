@@ -8,20 +8,36 @@ export class UserService {
 
   friends = [
     {
-      name: 'Duenchay Wongtree',
-      pic: 'pare.jpg',
-      position: 'CEO',
-    },
-    {
-      name: 'Thidarat Ruamsamrong',
-      pic: 'ket.jpg',
-      position: 'Secretary',
-    },
-    {
-      name: 'Toranit Wongkhamsa',
+      name: 'King',
       pic: 'king.jpg',
-      position: 'IT Support',
-    }
+     
+    },
+    {
+      name: 'Pare',
+      pic: 'pare.jpg',
+     
+    },
+    {
+      name: 'ket',
+      pic: 'ket.jpg',
+     
+    },
+    {
+      name: 'Tik',
+      pic: 'tik.jpg',
+     
+    },
+    {
+      name: 'Pat',
+      pic: 'pat.jpg',
+     
+    },
+    {
+      name: 'Benz',
+      pic: 'alisa.jpg',
+     
+    },
+    
   ];
   users: any
 
